@@ -1,0 +1,21 @@
+<div class="row mt-4">
+    <div class="col-12 text-center">
+    <h1 class="text-danger font-weight-bold mb-4" style="font-size: 40px;">Staff Leave Management</h1>
+
+    </div>
+    <div class="col-6 offset-3 p-5" style="border: 3px solid #000;">
+        <form (ngSubmit)="onSubmit()" [formGroup]="LoginForm">
+            <div class="form-group">
+                <label for="userName">User Id</label>
+                <input type="text" formControlName="userName" class="form-control" id="userName">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" formControlName="password" class="form-control" id="password">
+            </div>
+            <button class="btn btn-primary btn-sm btn-block" type="submit">Login</button>
+            <br>
+            <span class="text-center">Not Registered Yet? <a routerLink="/register">Register</a></span>
+        </form>
+    </div>
+</div>

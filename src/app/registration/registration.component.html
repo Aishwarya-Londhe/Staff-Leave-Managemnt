@@ -1,0 +1,57 @@
+<div class="row mt-4">
+    <div class="col-6 offset-3 p-4" style="border: 3px solid #000;">
+        <form (ngSubmit)="onSubmit()" [formGroup]="RegistrationForm">
+            <div class="mb-4">
+                <input type="radio" formControlName="role" value="HOD" /> HOD
+                <input type="radio" class="ml-4" formControlName="role" value="staff" />
+                Staff
+            </div>
+            <div class="form-row">
+                <div class="form-group col">
+                    <label for="fname">First Name</label>
+                    <input type="text" formControlName="fname" class="form-control" id="fname">
+                </div>
+                <div class="form-group col">
+                    <label for="lname">Last Name</label>
+                    <input type="text" formControlName="lname" class="form-control" id="lname">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col">
+                    <label for="email">Email</label>
+                    <input type="text" formControlName="email" class="form-control" id="email">
+                </div>
+                <div class="form-group col">
+                    <label for="contact">Contact</label>
+                    <input type="text" formControlName="contact" class="form-control" id="contact">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6 mb-3">
+                    <label for="department" class="form-label">Department</label>
+                    <br>
+                    <select id="department" name="select" class="w-100" formControlName="department">
+                        <option>Mechanical</option>
+                        <option>IT</option>
+                        <option>Civil</option>
+                    </select>
+                </div>
+            </div>
+            <div formGroupName="LogIn">
+                <div class="form-row">
+                    <div class="form-group col">
+                        <label for="userName">Username</label>
+                        <input type="text" formControlName="userName" class="form-control" id="userName">
+                    </div>
+                    <div class="form-group col">
+                        <label for="password">Password</label>
+                        <input type="password" formControlName="password" class="form-control" id="password">
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-primary btn-sm btn-block" type="submit">Register</button>
+            <br>
+            <span class="text-center">Already Registered? <a routerLink="/login">Login</a></span>
+        </form>
+    </div>
+</div>

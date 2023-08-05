@@ -1,0 +1,34 @@
+<button mat-icon-button style="float: right;margin: 5px" matDialogClose>
+    <mat-icon>close</mat-icon>
+  </button>
+  <mat-dialog-content>
+    <form (ngSubmit)="onSubmit()" [formGroup]="LeaveForm">
+        <div class="form-group">
+            <label for="from">From</label>
+            <br>
+            <input type="date" class="form-control" name="from" id="from" formControlName="from">
+        </div>
+        <div class="form-group">
+            <label for="to">To</label>
+            <br>
+        <input type="date" class="form-control" name="To" id="to" formControlName="To">
+        </div>
+        
+        <br><br>
+        <div class="form-group">
+            <label for="reason">Reason</label>
+            <input type="text" formControlName="reason" class="form-control">
+    
+        </div>
+    
+        <br>
+        <button class="btn btn-primary">
+            Cancel
+        </button>
+        <button mat-raised-button class="btn btn-primary" type="submit">
+            Submit
+        </button>
+    </form>
+    
+
+  </mat-dialog-content>

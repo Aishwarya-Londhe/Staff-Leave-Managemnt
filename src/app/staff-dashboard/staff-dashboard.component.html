@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12 mt-4">
+      <h1 class="text-center font-weight-bold">Leave Details</h1>
+
+      <div class="row">
+        <button class="btn btn-primary m-4" (click)="ApplyNewLeave()">+ Apply Leave</button>
+      </div>
+      <div *ngFor="let para of detaillist">
+        <div class="row">
+          <div class="col-4">
+            <h2>{{para.totalleaves}}</h2>
+            <h2>Total Leave</h2>
+          </div>
+          <div class="col-4">
+            <h2>{{para.approvedleave}}</h2>
+            <h2>Approved</h2>
+          </div>
+          <div class="col-4">
+            <h2>{{para.rejectedleave}}</h2>
+            <h2>Rejected</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-6 col-md-4 col-lg-3 gy-3 my-3" *ngFor="let data of updatelist">
+          <div class="card">
+            <div class="card-body">
+              <p>Leave from {{data.from}}</p>
+              <p>Number of days {{data.leaveday}}</p>
+              <br>
+              <p><strong>Reason :</strong> {{data.reason}}</p>
+              <p>Status : {{data.status}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
